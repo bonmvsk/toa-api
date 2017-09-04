@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var bear = require('./bearRoute');
+var user = require('./userRoute');
 
 module.exports = {
   init: function (app) {
@@ -11,6 +12,7 @@ module.exports = {
     });
 
     router.use(bear);
+    router.use(user);
 
     // REGISTER OUR ROUTES -------------------------------
     // all of our routes will be prefixed with /api
